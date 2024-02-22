@@ -41,26 +41,26 @@ class TestAnswer():
 
     def test_format_pi(self):
         TestAnswer.__total__ += 1
-        string_pi,comma_string,exp_string,center_string,left_string = answer.string_formating()
+        string_pi,comma_string,exp_string,center_string = answer.string_formating()
         assert (string_pi == '{0:.6f}'.format(3.141592653589793))
 
         TestAnswer.__correct__ += 1
     def test_format_comma(self):
         TestAnswer.__total__ += 1
-        string_pi,comma_string,exp_string,center_string,left_string = answer.string_formating()
+        string_pi,comma_string,exp_string,center_string = answer.string_formating()
         assert (comma_string == "{:,}".format(100000000))
 
         TestAnswer.__correct__ += 1
     def test_format_exp(self):
         TestAnswer.__total__ += 1
-        string_pi,comma_string,exp_string,center_string,left_string = answer.string_formating()
+        string_pi,comma_string,exp_string,center_string = answer.string_formating()
         assert (exp_string == "{:.2e}".format(100000000))
 
         TestAnswer.__correct__ += 1
 
     def test_format_center(self):
         TestAnswer.__total__ += 1
-        string_pi,comma_string,exp_string,center_string,left_string = answer.string_formating()
+        string_pi,comma_string,exp_string,center_string = answer.string_formating()
         assert (center_string == "{:^10d}".format(13))
 
         TestAnswer.__correct__ += 1
